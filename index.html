@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SHIMA Kelly Guy | Professional Portfolio</title>
+<meta name="description" content="Professional portfolio of SHIMA Kelly Guy — Network Communication Systems, networking, software and IoT projects.">
+<style>
+:root{
+  --ink:#111111; --cream:#f5f0e5; --paper:#fffdf8; --gold:#c99a32;
+  --blue:#1877a8; --green:#3f7d58; --muted:#68645b; --line:#ded7c8;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,Arial,sans-serif;background:var(--cream);color:var(--ink);line-height:1.6}
+a{color:inherit;text-decoration:none}
+.container{width:min(1120px,92%);margin:auto}
+nav{position:sticky;top:0;z-index:20;background:rgba(245,240,229,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.navin{display:flex;align-items:center;justify-content:space-between;min-height:70px}
+.logo{font-weight:900;letter-spacing:.08em}
+.logo span{color:var(--gold)}
+.navlinks{display:flex;gap:24px;font-size:.92rem;font-weight:700}
+.navlinks a:hover{color:var(--gold)}
+.hero{padding:78px 0 65px;position:relative;overflow:hidden}
+.photo img{width:100%;height:100%;object-fit:cover;display:block}
+.hero:before{content:"";position:absolute;left:-90px;top:20px;width:210px;height:520px;background:repeating-linear-gradient(45deg,#151515 0 18px,#d4ad59 18px 36px);opacity:.09;transform:rotate(8deg)}
+.grid{display:grid;grid-template-columns:1.1fr .9fr;gap:55px;align-items:center}
+.kicker{display:inline-block;padding:8px 14px;border:1px solid #bcae91;border-radius:30px;background:#fffaf0;font-size:.8rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
+h1{font-size:clamp(3.3rem,8vw,7rem);line-height:.88;margin:22px 0 20px;letter-spacing:-.06em}
+.script{font-family:cursive;font-weight:500;font-size:1.35em}
+.gold{color:var(--gold)}
+.lead{font-size:1.18rem;color:var(--muted);max-width:650px}
+.buttons{display:flex;gap:14px;flex-wrap:wrap;margin-top:28px}
+.btn{display:inline-block;padding:13px 20px;border-radius:8px;font-weight:800;border:1px solid var(--ink)}
+.btn.primary{background:var(--ink);color:white}
+.btn.light{background:var(--paper)}
+.card{background:var(--paper);border:1px solid var(--line);box-shadow:8px 10px 0 rgba(0,0,0,.08);padding:28px;border-radius:4px;transform:rotate(1deg)}
+.card h3{font-size:1.5rem;margin-bottom:8px}
+.polaroid{background:white;padding:12px 12px 22px;box-shadow:0 12px 24px rgba(0,0,0,.13);transform:rotate(-3deg)}
+.photo{height:330px;background:linear-gradient(150deg,#82b8d2,#d9edf4 48%,#4d8060);display:flex;align-items:flex-end;justify-content:center;overflow:hidden}
+.photo .person{font-size:110px;filter:grayscale(.2)}
+.caption{font-family:cursive;font-size:1.15rem;padding-top:12px;text-align:center}
+section{padding:85px 0}
+.section-head{display:flex;align-items:end;justify-content:space-between;gap:25px;margin-bottom:38px}
+.eyebrow{font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;font-weight:900;color:var(--green)}
+h2{font-size:clamp(2.3rem,5vw,4.2rem);line-height:1;letter-spacing:-.04em}
+.about{display:grid;grid-template-columns:.8fr 1.2fr;gap:45px}
+.aboutbox{border-left:5px solid var(--gold);padding-left:25px}
+.pattern{min-height:260px;background:
+linear-gradient(135deg,transparent 25%,rgba(201,154,50,.25) 25% 35%,transparent 35% 65%,rgba(24,119,168,.16) 65% 75%,transparent 75%),
+repeating-linear-gradient(45deg,rgba(0,0,0,.05) 0 12px,transparent 12px 24px);
+display:grid;place-items:center;border:1px solid var(--line)}
+.basket{font-size:90px}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:28px}
+.stat{background:var(--ink);color:#fff;padding:24px}
+.stat strong{font-size:2rem;display:block;color:#f0c75e}
+.project{display:grid;grid-template-columns:1fr 1fr;gap:35px}
+.project-main{background:var(--paper);padding:38px;border:1px solid var(--line)}
+.project-main h3{font-size:2rem;margin:10px 0}
+.project-main p{color:var(--muted)}
+.tags{display:flex;gap:9px;flex-wrap:wrap;margin:22px 0}
+.tag{padding:7px 11px;background:#ece4d2;border-radius:20px;font-size:.8rem;font-weight:800}
+.diagram{background:#101010;color:#fff;padding:28px;min-height:360px;display:flex;flex-direction:column;justify-content:center;gap:15px}
+.node{border:1px solid #777;padding:13px;text-align:center;background:#191919}
+.arrow{text-align:center;color:#e5ba54;font-size:1.3rem}
+.skills{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.skill{background:var(--paper);padding:22px;border:1px solid var(--line);min-height:150px}
+.skill b{display:block;font-size:1.1rem;margin-bottom:8px}
+.skill p{color:var(--muted);font-size:.92rem}
+.timeline{border-left:2px solid var(--gold);padding-left:25px;display:grid;gap:25px}
+.item{background:var(--paper);padding:24px;border:1px solid var(--line)}
+.item h3{margin-bottom:5px}
+.item small{color:var(--green);font-weight:800}
+.contact{background:var(--ink);color:white}
+.contact .eyebrow{color:#e4ba58}
+.contact p{color:#d0d0d0;max-width:650px}
+.contact-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:40px;align-items:end}
+footer{background:var(--ink);color:#aaa;border-top:1px solid #333;padding:20px 0;text-align:center;font-size:.85rem}
+.rw{display:inline-flex;gap:7px;align-items:center;font-weight:800;margin-top:18px}
+.flag{width:28px;height:18px;background:linear-gradient(#2d8ac0 0 50%,#f0c43c 50% 72%,#3d8a55 72%);position:relative}
+.flag:after{content:"✦";position:absolute;right:2px;top:-5px;color:#f6d14d;font-size:12px}
+@media(max-width:800px){
+ .grid,.about,.project,.contact-grid{grid-template-columns:1fr}
+ .skills{grid-template-columns:1fr 1fr}
+ .navlinks{display:none}
+ .hero{padding-top:50px}
+ .photo{height:280px}
+}
+@media(max-width:500px){.skills,.stats{grid-template-columns:1fr}h1{font-size:3.4rem}}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="container navin">
+    <a class="logo" href="#home">SK<span>.</span></a>
+    <div class="navlinks">
+      <a href="#about">About</a><a href="#project">Project</a><a href="#skills">Skills</a>
+      <a href="#journey">Journey</a><a href="#contact">Contact</a><a href="cv.html">CV</a>
+    </div>
+  </div>
+</nav>
+
+<main>
+<section class="hero" id="home">
+  <div class="container grid">
+    <div>
+      <span class="kicker">Creative • Technology • Rwanda</span>
+      <h1>SHIMA<br><span class="script gold">Kelly Guy</span></h1>
+      <p class="lead">Network Communication Systems student and technology creator focused on building practical digital solutions through networking, software, IoT and modern web technologies.</p>
+      <div class="rw"><span class="flag"></span> Don’t just build to finish • Built for impact</div>
+      <div class="buttons">
+        <a class="btn primary" href="https://www.linkedin.com/in/shima-guy-kelly-5b36b8330" target="_blank" rel="noopener">Hire me</a>
+        <a class="btn light" href="https://wa.me/250785617177" target="_blank" rel="noopener">Connect</a>
+        <a class="btn light" href="cv.html">View CV</a>
+      </div>
+    </div>
+    <div class="polaroid">
+      <div class="photo"><img src="IMG_1497.JPG%20(1).jpeg" alt="SHIMA Kelly Guy"></div>
+      <div class="caption">Create • Build • Grow</div>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+ <div class="container">
+  <div class="section-head"><div><div class="eyebrow"> About me</div><h2>Technology with purpose.</h2></div></div>
+  <div class="about">
+    <div class="pattern">
+      <img src="thumb.png" alt="Thumb illustration" style="max-width:320px; width:100%; height:auto; display:block;">
+    </div>
+    <div class="aboutbox">
+      <p>I am SHIMA Kelly Guy, a Network Communication Systems student at Adventist University of Central Africa (AUCA). My interests combine networking, cybersecurity, software development, databases, cloud technologies and IoT.</p>
+      <p style="margin-top:18px">I enjoy turning real-world problems into systems that are useful, scalable and easy to understand. My portfolio reflects a balance between technical engineering and creative problem solving.</p>
+      <div class="stats">
+        <div class="stat"><strong>IoT</strong>Smart systems</div>
+        <div class="stat"><strong>NET</strong>Networks</div>
+        <div class="stat"><strong>DEV</strong>Software</div>
+      </div>
+    </div>
+  </div>
+ </div>
+</section>
+
+<section id="project">
+ <div class="container">
+  <div class="section-head"><div><div class="eyebrow"> Featured project</div><h2>Smart Traffic<br>Management</h2></div></div>
+  <div class="project">
+   <article class="project-main">
+    <span class="kicker">Final-year / IoT Project</span>
+    <h3>Adaptive traffic signal control for Kigali</h3>
+    <p>An IoT-based vehicle detection and adaptive traffic signal control system designed to improve traffic flow by using real-time road data instead of fixed signal timing.</p>
+    <div class="tags">
+      <span class="tag">IoT</span><span class="tag">AI Cameras</span><span class="tag">Radar</span>
+      <span class="tag">Raspberry Pi</span><span class="tag">Jetson Nano</span><span class="tag">4G / NB-IoT</span>
+      <span class="tag">LoRaWAN</span><span class="tag">ThingsBoard</span><span class="tag">PostgreSQL</span>
+    </div>
+    <h3 style="font-size:1.25rem">The goal</h3>
+    <p>Detect traffic conditions, transmit data to a central traffic-management platform, analyze congestion and dynamically adjust traffic signals at selected Kigali intersections.</p>
+   </article>
+   <div class="diagram">
+      <div class="node"> Vehicle detection — Radar + AI cameras</div>
+      <div class="arrow"> Real-time data</div>
+      <div class="node">Edge gateway — Raspberry Pi / Jetson Nano</div>
+      <div class="arrow">4G / NB-IoT / LoRaWAN</div>
+      <div class="node">ThingsBoard + PostgreSQL / TimescaleDB</div>
+      <div class="arrow">Decision & monitoring</div>
+      <div class="node">Adaptive traffic signals + TMC dashboard</div>
+   </div>
+  </div>
+
+  <div class="project" style="margin-top:35px;">
+   <article class="project-main">
+    <span class="kicker">Web Project</span>
+    <h3>Rwanda Ride</h3>
+    <p>A modern website project showcasing Rwanda ride services, travel-focused design, and an engaging interface for users exploring mobility options in Rwanda.</p>
+    <div class="tags">
+      <span class="tag">Web Design</span><span class="tag">Responsive UI</span><span class="tag">Travel</span>
+      <span class="tag">Frontend</span><span class="tag">Branding</span>
+    </div>
+    <div class="buttons" style="margin-top:20px;">
+      <a class="btn primary" href="https://shimakelly.github.io/Rwanda-ride/" target="_blank" rel="noopener">View project</a>
+    </div>
+   </article>
+   <div class="diagram">
+      <div class="node">Landing page experience</div>
+      <div class="arrow">Improved user flow</div>
+      <div class="node">Responsive design</div>
+      <div class="arrow">Accessible on all devices</div>
+      <div class="node">Travel and mobility brand showcase</div>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section id="skills">
+ <div class="container">
+  <div class="section-head"><div><div class="eyebrow"> Skills</div><h2>What I build with.</h2></div></div>
+  <div class="skills">
+   <div class="skill"><b>Networking</b><p>Routing, switching, VLANs, OSPF, RIP, BGP, STP/LACP, VPN and network troubleshooting.</p></div>
+   <div class="skill"><b>Software</b><p>Java, Python, web development and application architecture with practical database integration.</p></div>
+   <div class="skill"><b>Cybersecurity</b><p>Network security concepts, access control, IPsec, firewall/ASA concepts and defensive security practices.</p></div>
+   <div class="skill"><b>IoT & Cloud</b><p>Connected devices, edge computing, telemetry, dashboards, cloud communication and data platforms.</p></div>
+  </div>
+ </div>
+</section>
+
+<section id="journey">
+ <div class="container">
+  <div class="section-head"><div><div class="eyebrow"> Journey</div><h2>Learning by building.</h2></div></div>
+  <div class="timeline">
+   <div class="item"><small>NETWORKING</small><h3>Infrastructure & communication</h3><p>Hands-on work with routing, switching, VLANs, OSPF, BGP, VPNs and network troubleshooting.</p></div>
+   <div class="item"><small>SOFTWARE</small><h3>Application development</h3><p>Built and explored Java applications, JavaFX interfaces, databases and personal finance-management systems.</p></div>
+   <div class="item"><small>INNOVATION</small><h3>Smart Traffic Management</h3><p>Designed an IoT-based adaptive traffic solution for a Kigali pilot, connecting sensing, edge computing, communications, analytics and control.</p></div>
+  </div>
+ </div>
+</section>
+
+<section id="contact" class="contact">
+ <div class="container contact-grid">
+  <div>
+   <div class="eyebrow"> Contact</div>
+   <h2 style="margin:12px 0 18px">Let's create something useful.</h2>
+   <p>Open to conversations about technology projects, networking, software, IoT and opportunities to learn, collaborate and build.</p>
+  </div>
+  <div>
+   <p><strong>Email</strong><br><a href="mailto:shimaguykelly@gmail.com">shimaguykelly@gmail.com</a></p>
+   <p style="margin-top:15px"><strong>Phone</strong><br><a href="tel:+250785617177">0785617177</a></p>
+   <p style="margin-top:15px"><strong>WhatsApp</strong><br><a href="https://wa.me/250785617177" target="_blank" rel="noopener">Chat on WhatsApp</a></p>
+   <p style="margin-top:15px"><strong>GitHub</strong><br><a href="https://github.com/kellyshima" target="_blank" rel="noopener">github.com/kellyshima</a></p>
+   <p style="margin-top:15px"><strong>LinkedIn</strong><br><a href="https://www.linkedin.com/in/shima-guy-kelly-5b36b8330" target="_blank" rel="noopener">linkedin.com/in/shima-guy-kelly-5b36b8330</a></p>
+   <p style="margin-top:15px"><strong>CV</strong><br><a href="SHIMA_CV.pdf" target="_blank" rel="noopener">Open my CV</a></p>
+   <p style="margin-top:15px"><strong>Location</strong><br>Kigali, Rwanda</p>
+  </div>
+ </div>
+</section>
+</main>
+
+<footer>© 2026 SHIMA Kelly Guy • Create • Build • Grow • Rwanda</footer>
+</body>
+</html>
